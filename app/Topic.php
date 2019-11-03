@@ -10,7 +10,7 @@ class Topic extends Model
 
     public function categories() {
 
-        return $this->belongsTo(Topic::class);
+        return $this->belongsTo(Categories::class);
 
     }
 }

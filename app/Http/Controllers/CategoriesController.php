@@ -52,9 +52,10 @@ class CategoriesController extends Controller
     public function show(Categories $categories)
     {
 
-        $topics = Topic::findOrFail( $categories->id)->get();
+        $topics = Categories::findOrFail($categories->id)->topics;
         // dd($topics);
 
+        // $categories = Categories::all();
         return view('category', compact('categories', 'topics'));
     }
 

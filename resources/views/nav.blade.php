@@ -51,37 +51,52 @@
 
 
 <div class="d-flex flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm sticky-top">
-    <h5 class="my-0 mr-auto font-weight-normal"  href="{{ route('/') }}">{{ config('app.name', 'ValuationCalc') }}</h5>
+    {{-- <h5   href="{{ route('/') }}">{{ config('app.name', 'ValuationCalc') }}</h5> --}}
+    <nav role='navigation' class="my-0 mr-auto font-weight-normal">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            {{-- <ul id="menu">
+                @foreach ($categories as $category)
+                <a href="{{ route('category.show', ['categories' => $category]) }}"><li>{{ $category->name }}</li></a>
+                @endforeach
+            </ul> --}}
+        </div>
+    </nav>
+
     <nav class="my-2 my-md-0">
         <a class="p-2 text-dark" style="font-size: 13px" href="#">SUBSCRIBE</a>
         <a class="p-2 text-dark" style="font-size: 13px" href="#">CONTACT</a>
     </nav>
     @guest
-            <a class="btn btn-outline-primary mx-2" href="{{ route('login') }}">{{ __('Login') }}</a>
-                {{-- <li class="nav-item">
-                </li> --}}
-                @if (Route::has('register'))
-                <a class="btn btn-outline-primary" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    {{-- <li class="nav-item">
-                    </li> --}}
-                @endif
-                @else
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
 
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
+        <a class="btn btn-outline-primary mx-2" href="{{ route('login') }}">{{ __('Login') }}</a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                @endguest
+        @if (Route::has('register'))
+
+            <a class="btn btn-outline-primary" href="{{ route('register') }}">{{ __('Register') }}</a>
+
+        @endif
+        @else
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+    @endguest
 </div>
