@@ -27,8 +27,6 @@ class HomeController extends Controller
 
         $categories = Categories::all();
 
-        return view('home', [
-            'categories' => $categories,
-        ]);
+        return view('home', compact('categories'));
     }
 }

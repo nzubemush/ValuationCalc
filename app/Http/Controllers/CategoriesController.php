@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
+use App\Topic;
 use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
@@ -15,7 +16,9 @@ class CategoriesController extends Controller
     public function index()
     {
         // $categories = Categories::all();
-        // dd($categories);
+        // $topic = Topic::all();
+
+        // return view('')
 
     }
 
@@ -48,7 +51,11 @@ class CategoriesController extends Controller
      */
     public function show(Categories $categories)
     {
-        //
+
+        $topics = Topic::findOrFail( $categories->id)->get();
+        // dd($topics);
+
+        return view('category', compact('categories', 'topics'));
     }
 
     /**
