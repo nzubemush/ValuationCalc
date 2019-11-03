@@ -48,7 +48,7 @@
   }
 
   .cardi:hover p {
-    color: var(--text-color-hover);
+    color: tomato;
   }
 
   .cardi:active {
@@ -119,15 +119,16 @@
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
   }
 
-  a
+  ul a
   {
     text-decoration: none;
     color: #232323;
-
     transition: color 0.3s ease;
+    font-size: 17px;
+
   }
 
-  a:hover
+  ul a:hover
   {
     color: tomato;
   }
@@ -173,7 +174,7 @@
     margin-bottom: 5px;
     position: relative;
 
-    background: #B8F9D3;
+    background: tomato;
     border-radius: 3px;
 
     z-index: 1;
@@ -229,12 +230,11 @@
    */
   #menu
   {
-    position: absolute;
+    position: fixed;
     width: 300px;
     margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-
+    padding: 0px 50px;
+    padding-top: 105px;
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -246,10 +246,12 @@
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
 
-  #menu li
+  #menu hr
   {
-    padding: 10px 0;
-    font-size: 22px;
+    padding: 0px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-top: 2px solid #B8F9D3;
   }
 
   /*
@@ -289,7 +291,7 @@
   }
 
   .pill:hover h3 {
-    color: var(--text-color-hover);
+    color: tomato;
   }
 
   .pill:active {
@@ -305,4 +307,19 @@
     z-index: 1000;
     -webkit-transition: color 0.3s ease-out;
     transition: color 0.3s ease-out;
+  }
+
+  .navtext {
+    color: tomato !important;
+  }
+
+  .navitext {
+    color: tomato !important;
+    border: solid 1px tomato;
+    border-radius: 4px;
+  }
+
+  .navitext:hover {
+    background-color: #B8F9D3;
+    ;
   }
