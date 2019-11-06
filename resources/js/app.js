@@ -29,4 +29,25 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
-});
+
+        // data: {
+        //         values:[{id:1 val:p,description:d},
+        //                 {id:2 val:i,description:interest},
+        //                 {id:3 val:t,description:time},
+        //                 {id:4 val:r,description:rate}]
+        // },
+
+        // mounted() {
+        //     console.log('Component mounted.')
+        // }
+
+        data: {
+            // values: [{id:1,val:p,description:d},
+            //                     {id:2 ,val:i,description:interest},
+            //                     {id:3 ,val:t,description:time},
+            //                     {id:4 ,val:r,description:rate}]
+            //     },
+             items:[5,4,3]
+
+}});
+

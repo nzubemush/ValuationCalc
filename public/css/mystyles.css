@@ -1,7 +1,6 @@
 .category {
     --bg-color: #B8F9D3;
     --bg-color-light: #e2fced;
-    --text-color-hover: #4C5656;
     --box-shadow-color: rgba(184, 249, 211, 0.48);
   }
 
@@ -59,7 +58,7 @@
 
   .cardi p {
     font-size: 17px;
-    color: #4C5656;
+    color: black;
     margin-top: 10px;
     z-index: 1000;
     -webkit-transition: color 0.3s ease-out;
@@ -122,7 +121,7 @@
   ul a
   {
     text-decoration: none;
-    color: #232323;
+    color: #000000;
     transition: color 0.3s ease;
     font-size: 17px;
 
@@ -232,10 +231,9 @@
   {
     position: fixed;
     width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 0px 50px;
-    padding-top: 105px;
-    background: #ededed;
+    margin: -90px 0 0 -24px;
+    padding: 100px 0px 50px;
+    background: #B8F9D3;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -251,7 +249,7 @@
     padding: 0px;
     margin-top: 2%;
     margin-bottom: 2%;
-    border-top: 2px solid #B8F9D3;
+    border-top: 1px solid rgb(28, 58, 41);
   }
 
   /*
@@ -302,7 +300,7 @@
 
   .pill h3 {
     font-size: 20px;
-    color: rgb(75, 117, 92);
+    color: black;
     margin: 20px 0px;
     z-index: 1000;
     -webkit-transition: color 0.3s ease-out;
@@ -323,3 +321,9 @@
     background-color: #B8F9D3;
     ;
   }
+
+  .quantity::-webkit-inner-spin-button,
+.quantity::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

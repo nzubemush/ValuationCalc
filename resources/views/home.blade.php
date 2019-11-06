@@ -11,7 +11,7 @@
     <div class="row mb-3 text-center justify-content-center">
         @foreach ($categories as $category)
 
-        <a href="{{ route('category.show', ['categories' => $category]) }}" class="cardi category shadow-sm mx-2 my-3">
+        <a href="{{ route('categories.show', ['categories' => $category]) }}" class="cardi category shadow-sm mx-2 my-3">
                 <div class="overlay"></div>
             <div class="circle">
                 <i>&#xee0d;</i>

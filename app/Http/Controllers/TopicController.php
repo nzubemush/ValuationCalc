@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Categories;
 use App\Topic;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class TopicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        // $categories = Categories::all();
-        // $topic = Topic::all();
-
-        // return view('')
-
+        //
     }
 
     /**
@@ -46,26 +41,26 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Categories  $categories
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $categories = Categories::findOrFail($id);
-        $topics = Categories::findOrFail($id)->topics;
-        // dd($topics);
+        $topic = Topic::findOrFail($id);
+        $subtopics = Topic::findOrFail($id)->subtopics;
+        // dd($subtopics);
 
         // $categories = Categories::all();
-        return view('category', compact('categories', 'topics'));
+        return view('topic', compact('topic', 'subtopics'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Categories  $categories
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categories $categories)
+    public function edit($id)
     {
         //
     }
@@ -74,10 +69,10 @@ class CategoriesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Categories  $categories
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categories $categories)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -85,10 +80,10 @@ class CategoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Categories  $categories
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categories $categories)
+    public function destroy($id)
     {
         //
     }

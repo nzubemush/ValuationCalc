@@ -16,6 +16,10 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('/');
 
-Route::get('categories/{categories}', 'CategoriesController@show')->name('category.show');
+// Route::get('categories/{categories}', 'CategoriesController@show')->name('category.show');
 
-// Route::resource('categories', 'CategoriesController');
+Route::resource('categories', 'CategoriesController');
+
+Route::resource('topic', 'TopicController');
+
+Route::resource('subtopic', 'SubtopicController');

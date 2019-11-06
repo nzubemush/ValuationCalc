@@ -12,13 +12,13 @@
 <div class="container">
     <div class="row mb-3 text-center">
             @foreach ($topics as $topic)
-        <div class="col-md-3 pill category shadow-sm mx-2 my-3" data-toggle="tooltip" data-placement="top" title="Perform calculations associated with {{ $topic->name}}">
-            <h3>
+                <a href="{{ route('topic.show', ['topic' => $topic]) }}" class="col-md-3 pill category shadow-sm mx-2 my-3" data-toggle="tooltip" data-placement="top" title="Perform calculations associated with {{ $topic->name}}">
+                        <h3>
 
-            {{ $topic->name}}
+                        {{ $topic->name}}
 
-            </h3>
-        </div>
+                        </h3>
+                </a>
         @endforeach
     </div>
 </div>

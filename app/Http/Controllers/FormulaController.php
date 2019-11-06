@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Categories;
-use App\Topic;
+use App\Formula;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class FormulaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        // $categories = Categories::all();
-        // $topic = Topic::all();
-
-        // return view('')
-
+        //
     }
 
     /**
@@ -46,26 +41,21 @@ class CategoriesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Categories  $categories
+     * @param  \App\Formula  $formula
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Formula $formula)
     {
-        $categories = Categories::findOrFail($id);
-        $topics = Categories::findOrFail($id)->topics;
-        // dd($topics);
-
-        // $categories = Categories::all();
-        return view('category', compact('categories', 'topics'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Categories  $categories
+     * @param  \App\Formula  $formula
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categories $categories)
+    public function edit(Formula $formula)
     {
         //
     }
@@ -74,10 +64,10 @@ class CategoriesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Categories  $categories
+     * @param  \App\Formula  $formula
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categories $categories)
+    public function update(Request $request, Formula $formula)
     {
         //
     }
@@ -85,10 +75,10 @@ class CategoriesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Categories  $categories
+     * @param  \App\Formula  $formula
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categories $categories)
+    public function destroy(Formula $formula)
     {
         //
     }

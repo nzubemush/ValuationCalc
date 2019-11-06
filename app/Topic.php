@@ -13,4 +13,8 @@ class Topic extends Model
         return $this->belongsTo(Categories::class);
 
     }
+
+    public function subtopics() {
+        return $this->hasMany(Subtopic::class);
+    }
 }
