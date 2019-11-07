@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "algebra.js": "^0.2.6",
         "mdbootstrap": "^4.8.11"
     }
 }
