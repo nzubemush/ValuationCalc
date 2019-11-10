@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('guest', ['except' => 'logout']);
+    // }
+
     /**
      * Display a listing of the resource.
      *
@@ -36,9 +41,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $data = request()->validate([
-            'firstname' => 'required'
-        ]);
+        //
     }
 
     /**
@@ -72,7 +75,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $user->firstname = $request->get('firstname');
+        $user->lastname = $request->get('lastname');
+        $user->save();
+        return redirect('user')->with('status', 'Profile updated!');
     }
 
     /**

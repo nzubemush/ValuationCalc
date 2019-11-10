@@ -17,24 +17,29 @@
 
             <!-- edit form column -->
             <div class="col-md-9 personal-info">
-                <div class="alert alert-info alert-dismissable">
-                <a class="panel-close close" data-dismiss="alert">×</a>
-                <i class="fa fa-user"></i>
-                Welcome back <strong>{{Auth::User()->firstname}}</strong>.
-                </div>
+                    @if (session('status'))
+                        <div class="alert alert-info alert-dismissable">
+                            <a class="panel-close close" data-dismiss="alert">×</a>
+                            <i class="fa fa-user"></i>
+                            Welcome back <strong>{{Auth::User()->firstname}}</strong>. {{ session('status') }}
+                        </div>
+                    @endif
+
                 <h3>Personal info</h3>
 
                 <form class="form-horizontal" role="form" method="POST" action="{{ route('user.update', Auth::user()->id) }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="_method" value="PUT">
                     <div class="form-group">
                         <label class="col-lg-3 control-label">First name:</label>
                         <div class="col-lg-8">
-                        <input class="form-control" type="text" value="{{Auth::User()->firstname}}">
+                        <input class="form-control" type="text" name="firstname" value="{{Auth::User()->firstname}}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Last name:</label>
                         <div class="col-lg-8">
-                        <input class="form-control" type="text" value="{{Auth::User()->lastname}}">
+                        <input class="form-control" type="text" name="lastname" value="{{Auth::User()->lastname}}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -46,16 +51,13 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Email:</label>
                         <div class="col-lg-8">
-                        <input class="form-control" type="text" value="{{Auth::User()->email}}">
+                        <input class="form-control" type="text" name="email" value="{{Auth::User()->email}}">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-3 control-label"></label>
-                        <div class="col-md-8">
-                        <input type="button" class="btn btn-primary" value="Save Changes">
-                        <span></span>
-                        <input type="reset" class="btn btn-default" value="Cancel">
-                        </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-btn fa-sign-in"></i>Update
+                            </button>
                     </div>
                 </form>
             </div>

@@ -12,7 +12,7 @@ class Categories extends Model
         return $this->hasMany(Topic::class);
     }
 
-    public function getRouteKeyName() {
-        return 'name'; //this will return user name as route
-    }
+    // public function getRouteKeyName() {
+    //     return 'name'; //this will return user name as route
+    // }
 }
