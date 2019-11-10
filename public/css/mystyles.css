@@ -231,8 +231,8 @@
   {
     position: fixed;
     width: 300px;
-    margin: -90px 0 0 -24px;
-    padding: 100px 0px 50px;
+    margin: 0px 0 0 -24px;
+    padding: 10px 0px;
     background: #B8F9D3;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
