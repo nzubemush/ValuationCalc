@@ -136,7 +136,7 @@
   {
     display: block;
     position: fixed;
-    top: 25px;
+    top: 15px;
     /* left: 50px; */
 
     z-index: 1;
@@ -231,7 +231,7 @@
   {
     position: fixed;
     width: 300px;
-    margin: 0px 0 0 -24px;
+    margin: 14px 0 0 -24px;
     padding: 10px 0px;
     background: #B8F9D3;
     list-style-type: none;

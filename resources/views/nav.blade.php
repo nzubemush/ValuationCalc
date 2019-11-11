@@ -40,32 +40,35 @@
     </nav>
 
     <ul class="navbar-nav ml-auto">
-        <li class="my-2 my-md-0">
+        <li class=" my-md-0">
             <a class="p-2 text-dark navtext" style="font-size: 13px;" href="#">SUBSCRIBE</a>
+
             <a class="p-2 text-dark navtext" style="font-size: 13px" href="#">CONTACT</a>
-        </li>
+
         @guest
 
             <a class="btn text-dark mx-2 navitext" href="{{ route('login') }}">{{ __('Login') }}</a>
 
             @if (Route::has('register'))
 
-                <a class="btn text-dark navitext" href="{{ route('register') }}">{{ __('Register') }}</a>
+            <a class="btn text-dark navitext" href="{{ route('register') }}">{{ __('Register') }}</a>
 
             @endif
             @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->firstname }} <span class="caret"></span>
-                    </a>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="p-2 text-dark navtext" style="font-size: 13px;" href="#">HISTORY</a>
 
-                        <a class="dropdown-item" href="{{url('user')}}">
+            <a class="p-2 text-dark navtext dropdown-toggle" href="" style="font-size: 13px; text-transform: uppercase;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fa fa-user"></i>
+                {{ Auth::user()->firstname }}
+            </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+
+                        <a class="p-2 text-dark navtext dropdown-item" style="font-size: 13px;" href="{{url('user')}}">
                             Profile
                         </a>
 
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        <a class="p-2 text-dark navtext dropdown-item" style="font-size: 13px;" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
@@ -75,8 +78,9 @@
                             @csrf
                         </form>
                     </div>
-                </li>
+
         @endguest
+        </li>
 
     </ul>
     </div>
