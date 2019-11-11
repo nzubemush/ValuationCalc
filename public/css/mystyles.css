@@ -1,5 +1,5 @@
 .category {
-    --bg-color: #B8F9D3;
+    --bg-color: #fff;
     --bg-color-light: #e2fced;
     --box-shadow-color: rgba(184, 249, 211, 0.48);
   }
@@ -7,7 +7,7 @@
   .cardi {
     width: 220px;
     height: 220px;
-    background: #fff;
+    background: #324A5E;
     border-top-right-radius: 10px;
     overflow: hidden;
     display: -webkit-box;
@@ -58,7 +58,7 @@
 
   .cardi p {
     font-size: 17px;
-    color: black;
+    color: whitesmoke;
     margin-top: 10px;
     z-index: 1000;
     -webkit-transition: color 0.3s ease-out;
@@ -97,10 +97,13 @@
     transition: opacity 0.3s ease-out;
   }
 
-  .circle i {
+  .circle .img {
     z-index: 10000;
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
+    width: 118px;
+    position: absolute;
+    height: 118px;
   }
 
   .overlay {
@@ -136,7 +139,7 @@
   {
     display: block;
     position: fixed;
-    top: 15px;
+    top: 12px;
     /* left: 50px; */
 
     z-index: 1;
@@ -231,7 +234,7 @@
   {
     position: fixed;
     width: 300px;
-    margin: 14px 0 0 -24px;
+    margin: 10px 0 0 -24px;
     padding: 10px 0px;
     background: #B8F9D3;
     list-style-type: none;
@@ -261,7 +264,7 @@
   }
 
 .pill {
-    background: #fff;
+    background: #324A5E;
     border-top-right-radius: 10px;
     overflow: hidden;
     display: -webkit-box;
@@ -300,7 +303,7 @@
 
   .pill h3 {
     font-size: 20px;
-    color: black;
+    color: wheat;
     margin: 20px 0px;
     z-index: 1000;
     -webkit-transition: color 0.3s ease-out;
@@ -331,4 +334,17 @@
 .span-img {
     width: 40px;
     height: 35px;
+}
+
+body {
+    background-image: url(../storage/transbg.png);
+    background-attachment: fixed;
+    background-color: rgba(184, 249, 211, 0.191);
+}
+
+.logo-image{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-top: -10px;
 }

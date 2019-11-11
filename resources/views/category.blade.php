@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('nav2')
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">

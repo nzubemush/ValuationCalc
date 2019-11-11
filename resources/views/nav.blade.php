@@ -1,43 +1,4 @@
-<div class="d-flex flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom shadow-sm sticky-top">
-    {{-- <h5   href="{{ route('/') }}">{{ config('app.name', 'ValuationCalc') }}</h5> --}}
-    <nav role='navigation' class="my-0 mr-auto font-weight-normal">
-        <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-
-            <ul id="menu">
-
-                <a href="/"><li style="padding-left: 10px;">Home</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/4"><li style="padding-left: 10px;">Actuarial Principles and Practice</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/5"><li style="padding-left: 10px;">Economics</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/6"><li style="padding-left: 10px;">Financial Management</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/7"><li style="padding-left: 10px;">Financial Risk Management</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/8"><li style="padding-left: 10px;">International Finance</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/9"><li style="padding-left: 10px;">Investment Banking and Financial Services</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/10"><li style="padding-left: 10px;">Management Accounting</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/11"><li style="padding-left: 10px;">Portfolio Management</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/12"><li style="padding-left: 10px;">Project Management</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/13"><li style="padding-left: 10px;">Quantitative Methods</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/14"><li style="padding-left: 10px;">Security Analysis</li></a>
-                <hr>
-                <a href="http://127.0.0.1:8000/categories/15"><li style="padding-left: 10px;">Strategic Financial Management</li></a>
-
-            </ul>
-        </div>
-    </nav>
+<div class="d-flex flex-md-row align-items-center p-1 px-md-4 border-bottom shadow-sm sticky-top" style="background-color: #324A5E;">
 
     <ul class="navbar-nav ml-auto">
         <li class=" my-md-0">

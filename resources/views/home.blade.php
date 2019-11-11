@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@include('nav')
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">ValuationCalc</h1>
@@ -14,7 +15,7 @@
         <a href="{{ route('categories.show', ['categories' => $category]) }}" class="cardi category shadow-sm mx-2 my-3">
                 <div class="overlay"></div>
             <div class="circle">
-                <i>&#xee0d;</i>
+                <img src="{{ '../storage/icons/' . $category->icon }}" alt="" class="img">
             </div>
             <p>{{ $category->name }}</p>
         </a>
