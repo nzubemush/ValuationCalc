@@ -1,5 +1,5 @@
 .category {
-    --bg-color: #fff;
+    --bg-color: wheat;
     --bg-color-light: #e2fced;
     --box-shadow-color: rgba(184, 249, 211, 0.48);
   }
@@ -58,7 +58,7 @@
 
   .cardi p {
     font-size: 17px;
-    color: whitesmoke;
+    color: wheat;
     margin-top: 10px;
     z-index: 1000;
     -webkit-transition: color 0.3s ease-out;
@@ -124,7 +124,7 @@
   ul a
   {
     text-decoration: none;
-    color: #000000;
+    color: wheat;
     transition: color 0.3s ease;
     font-size: 17px;
 
@@ -156,12 +156,9 @@
     position: absolute;
     top: -7px;
     left: -5px;
-
     cursor: pointer;
-
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
-
     -webkit-touch-callout: none;
   }
 
@@ -191,6 +188,7 @@
   #menuToggle span:first-child
   {
     transform-origin: 0% 0%;
+    color: tomato;
   }
 
   #menuToggle span:nth-last-child(2)
@@ -236,7 +234,7 @@
     width: 300px;
     margin: 10px 0 0 -24px;
     padding: 10px 0px;
-    background: #B8F9D3;
+    background: #324A5E;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -322,7 +320,10 @@
 
   .navitext:hover {
     background-color: #B8F9D3;
-    ;
+  }
+
+  .navtext:hover {
+    color: #B8F9D3;
   }
 
   .quantity::-webkit-inner-spin-button,
@@ -348,3 +349,12 @@ body {
     overflow: hidden;
     margin-top: -10px;
 }
+
+.card-body{
+    background-color: #324A5E;
+
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.1rem rgba(255, 99, 71, 0.787) ;
+  }

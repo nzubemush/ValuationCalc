@@ -177,7 +177,7 @@ a {
 
 a:hover {
   color: #1d68a7;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 a:not([href]):not([tabindex]) {
@@ -10954,7 +10954,7 @@ a.text-light:focus {
 
 a.text-dark:hover,
 a.text-dark:focus {
-  color: #121416 !important;
+  color: wheat !important;
 }
 
 .text-body {

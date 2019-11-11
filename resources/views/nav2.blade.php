@@ -2,7 +2,7 @@
         <nav role='navigation' class="my-0 mr-auto font-weight-normal">
                 <a class="navbar-brand" style="margin-left: 51px;" href="/">
                     <img src="{{ '../storage/valcal.png' }}" class="logo-image">
-                    <a class="text-dark navtext" style="font-size: 20px;">{{ config('app.name', 'ValuationCalc') }}</a>
+                    <a class="text-dark navtext" href="/" style="font-size: 20px;">{{ config('app.name', 'ValuationCalc') }}</a>
                 </a>
             <div id="menuToggle">
                 <input type="checkbox" />
