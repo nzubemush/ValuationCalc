@@ -47,7 +47,7 @@
   }
 
   .cardi:hover p {
-    color: tomato;
+    color: #324A5E;
   }
 
   .cardi:active {
@@ -290,7 +290,7 @@
   }
 
   .pill:hover h3 {
-    color: tomato;
+    color: #324A5E;
   }
 
   .pill:active {
@@ -350,6 +350,13 @@ body {
     margin-top: -10px;
 }
 
+.home-image{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-top: -20px;
+}
+
 .card-body{
     background-color: #324A5E;
 
@@ -357,4 +364,98 @@ body {
 
 .form-control:focus {
     box-shadow: 0 0 0 0.1rem rgba(255, 99, 71, 0.787) ;
-  }
+}
+
+input.sol {
+    background-color: #324A5E !important;
+    color: wheat;
+}
+
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #324A5E;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: wheat;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 400px;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 500px;
+    caret-color: tomato;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: wheat;
+    color: tomato;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:wheat;
+    text-decoration:none;
+    }
+
+    .searchbar1{
+        margin-bottom: auto;
+        margin-top: auto;
+        height: 30px;
+        background-color: #324A5E;
+        border-radius: 30px;
+        padding-left: 20px;
+        }
+
+        .search_input1{
+        color: wheat;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 50px;
+        caret-color:transparent;
+        line-height: 40px;
+        transition: width 0.4s linear;
+        }
+
+        .searchbar1:hover > .search_input1{
+        padding: 0 10px;
+        width: 100px;
+        caret-color: tomato;
+        transition: width 0.4s linear;
+        }
+
+        .searchbar1:hover > .search_icon1{
+        background: wheat;
+        color: tomato;
+        }
+
+        .search_icon1{
+        height: 40px;
+        width: 40px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color:wheat;
+        text-decoration:none;
+        }
+

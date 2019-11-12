@@ -1,21 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-@include('nav2')
+@include('layouts.nav2')
 
     <div class="container">
         <h1>Edit Profile</h1>
         <hr>
         <div class="row">
-            <!-- left column -->
-            <div class="col-md-3">
-                <div class="text-center">
-                <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
-                <h6>Upload a different photo...</h6>
-
-                <input type="file" class="form-control">
-                </div>
-            </div>
 
             <!-- edit form column -->
             <div class="col-md-9 personal-info">
@@ -53,12 +44,12 @@
                     <div class="form-group">
                         <label class="col-lg-3 control-label">Email:</label>
                         <div class="col-lg-8">
-                        <input class="form-control" type="text" name="email" value="{{Auth::User()->email}}">
+                        <input class="form-control" type="text" name="emai" value="{{Auth::User()->email}}" disabled>
                         </div>
                     </div>
                     <div class="form-group">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-btn fa-sign-in"></i>Update
+                            <button type="submit" class="btn navitext px-5" style="background-color:#324A5E">
+                                <i class="fa fa-upload"></i> Update
                             </button>
                     </div>
                 </form>

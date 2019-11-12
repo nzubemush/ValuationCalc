@@ -25,3 +25,7 @@ Route::resource('categories', 'CategoriesController');
 Route::resource('topic', 'TopicController');
 
 Route::resource('subtopic', 'SubtopicController');
+
+Route::view('contact', 'contact');
+
+Route::post('/search', 'HomeController@search')->name('search');

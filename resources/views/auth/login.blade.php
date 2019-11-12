@@ -5,7 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-lg-5 mt-5">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header row">
+                    <img src="{{ '../storage/valcal.png' }}" style="width:40px; height:40px;" class="col-2">
+                        <a href="/" class="col-7 pt-2 px-0 text-dark"><h4><strong>Valuation</strong>Calc</h4></a>
+                        <h4 class="col-3 pt-2">{{ __('Login') }}</h4>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -52,9 +56,9 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-12">
+                            <div class="col-md-12 text-center">
                                 <button type="submit" class="btn navitext px-5">
-                                    {{ __('=') }}
+                                        <i class="fas fa-sign-in-alt"></i>{{ __('') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
@@ -68,7 +72,7 @@
                 </div>
             </div>
 
-            <p class="mt-3"><strong>Don't have an account?  &nbsp; </strong><a class=" text-dark navtext" href="{{ route('register') }}">{{ __('Register Here') }}</a></p>
+            <p class="mt-3"><strong>Don't have an account?  &nbsp; </strong><a class="navtext" href="{{ route('register') }}">{{ __('Register Here') }}</a></p>
         </div>
     </div>
 </div>

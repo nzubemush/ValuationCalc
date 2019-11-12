@@ -1,11 +1,8 @@
-<div class="d-flex flex-md-row align-items-center p-1 px-md-4 border-bottom shadow-sm sticky-top" style="background-color: #324A5E;">
+<div class="d-flex flex-md-row align-items-center py-2 px-md-4 border-bottom shadow-sm sticky-top" style="background-color: #324A5E;">
 
     <ul class="navbar-nav ml-auto">
         <li class=" my-md-0">
-            <a class="p-2 text-dark navtext" style="font-size: 13px;" href="#">SUBSCRIBE</a>
-
-            <a class="p-2 text-dark navtext" style="font-size: 13px" href="#">CONTACT</a>
-
+            <a class="p-2 text-dark navtext" style="font-size: 13px;" href="#">CONTACT</a>
         @guest
 
             <a class="btn mx-2 navitext" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -26,13 +23,13 @@
                     <div class="dropdown-menu dropdown-menu-right">
 
                         <a class="p-2 text-dark navtext dropdown-item" style="font-size: 13px;" href="{{url('user')}}">
-                            <i class="fa fa-user"></i>Profile
+                            <i class="fa fa-user-circle"></i> Profile
                         </a>
 
                         <a class="p-2 text-dark navtext dropdown-item" style="font-size: 13px;" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                            <i class="fa fa-user"></i>{{ __('Logout') }}
+                            <i class="fas fa-sign-out-alt"></i>{{ __(' Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
