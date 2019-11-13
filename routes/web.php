@@ -24,8 +24,10 @@ Route::resource('categories', 'CategoriesController');
 
 Route::resource('topic', 'TopicController');
 
-Route::resource('subtopic', 'SubtopicController');
+Route::resource('subtopic', 'SubtopicController')->middleware('user');
 
-Route::view('contact', 'contact');
+Route::get('contact-us', 'ContactFormController@create')->name('contact-us');
+
+Route::post('contact', 'ContactFormController@store');
 
 Route::post('/search', 'HomeController@search')->name('search');

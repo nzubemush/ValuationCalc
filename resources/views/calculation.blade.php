@@ -18,7 +18,7 @@
             <div class="input-group-prepend">
                 <span><img src="{{ '../storage/formulas/' . $formula->image . '.png' }}" alt="" class="span-img mr-1"></span>
             </div>
-            <input type="text" onkeypress="return isNumberKey(this, event);" onkeyup="{{ $formula->function }}" id="{{ $formula->param }}" class="form-control quantity {{ $formula->param }}" placeholder="{{ $formula->description }}">
+            <input type="text" onkeypress="return isNumberKey(this, event);" onkeyup="{{ $formula->function }}" id="{{ $formula->param }}" class="form-control quantity {{ $formula->function }}" placeholder="{{ $formula->description }}" >
         </div>
 
     @endforeach

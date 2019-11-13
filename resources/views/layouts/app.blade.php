@@ -56,9 +56,13 @@
         })
 
         $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+        });
     </script>
 </head>
 <body>
@@ -69,6 +73,6 @@
 
     </div>
 
-
+@include('layouts.footer')
 </body>
 </html>

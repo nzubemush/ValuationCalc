@@ -13,7 +13,7 @@
             <form action="{{ route('search') }}" method="POST">
                     @csrf
                 <div class="searchbar">
-                    <input class="search_input" type="text" name="query" placeholder="Search...">
+                    <input class="search_input" type="text" name="query" placeholder="Search..." autocomplete="off">
                     <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
                 </div>
             </form>
@@ -39,5 +39,20 @@
 
 </div>
 
+@if (session('global'))
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" data-show="true" id="myModal">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="alert alert-warning m-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>{{ session('global') }}</strong> So sad to see you go &nbsp; <i class="fa fa-frown"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
 
 @endsection

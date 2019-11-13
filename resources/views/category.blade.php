@@ -3,11 +3,23 @@
 @section('content')
 @include('layouts.nav2')
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">{{ $categories->name }}</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-  </div>
+<div class="jumbotron jumbotron-fluid" style="background-color: rgba(245, 222, 179, 0.315);">
+<div class="container">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-2">
+
+            <img src="{{ '../storage/icons/' . $categories->icon }}" alt="{{ $categories->name }}" style="width:100%">
+
+        </div>
+        <div class="col-md-9">
+
+            <h1 class="display-4">{{ $categories->name }}</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+        </div>
+    </div>
+</div>
+
 </div>
 
 <div class="container">

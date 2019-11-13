@@ -11,12 +11,22 @@
             <!-- edit form column -->
             <div class="col-md-9 personal-info">
                     @if (session('status'))
-                        <div class="alert alert-info alert-dismissable">
-                            <a class="panel-close close" data-dismiss="alert">×</a>
-                            <i class="fa fa-user"></i>
-                            Welcome back <strong>{{Auth::User()->firstname}}</strong>. {{ session('status') }}
+                        <!-- Modal -->
+                        <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" data-show="true" id="myModal">
+                            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="alert alert-success m-0">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <i class="fa fa-user"></i>
+                                        Success! <strong>{{ ucfirst(Auth::User()->firstname) }}</strong>. {{ session('status') }}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     @endif
+
 
                 <h3>Personal info</h3>
 
@@ -48,12 +58,20 @@
                         </div>
                     </div>
                     <div class="form-group">
-                            <button type="submit" class="btn navitext px-5" style="background-color:#324A5E">
-                                <i class="fa fa-upload"></i> Update
-                            </button>
+                        <button type="submit" class="btn navitext px-5 ml-3" style="background-color:#324A5E">
+                            <i class="fa fa-upload"></i> Update
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
+
+        <form action="{{ route('user.destroy', Auth::user()->id) }}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button class="btn navitext px-5 ml-3 mt-3" style="background-color:#324A5E">
+                <i class="fa fa-exclamation-triangle"></i> Delete Account
+            </button>
+        </form>
     </div>
 @endsection

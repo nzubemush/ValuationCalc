@@ -24,6 +24,23 @@
 
         @endforeach
     </div>
+    @if($errors->any())
+
+    <!-- Modal -->
+        <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" data-show="true" id="myModal">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="alert alert-danger m-0">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <a><i class="fas fa-exclamation-circle"></i> &nbsp; This formula is only available for registered users <a href="{{ route('login') }}">&nbsp; Login </a>&nbsp; or <a href="{{ route('register') }}">&nbsp; Register</a></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+      <!-- Modal -->
 </div>
 
 @endsection

@@ -2,7 +2,7 @@
 
     <ul class="navbar-nav ml-auto">
         <li class=" my-md-0">
-            <a class="p-2 text-dark navtext" style="font-size: 13px;" href="#">CONTACT</a>
+            <a class="p-2 text-dark navtext" style="font-size: 13px;" href="{{ route('contact-us') }}">CONTACT US</a>
         @guest
 
             <a class="btn mx-2 navitext" href="{{ route('login') }}">{{ __('Login') }}</a>
