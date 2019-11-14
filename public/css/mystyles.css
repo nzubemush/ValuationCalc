@@ -368,7 +368,7 @@ body {
 
 input.Sol {
     background-color: #324A5E !important;
-    color: wheat;
+    color: wheat !important;
     pointer-events: none;
 }
 

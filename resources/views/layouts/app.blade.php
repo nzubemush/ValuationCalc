@@ -33,6 +33,8 @@
     {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script> --}}
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    {{-- Sweet alert --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <style>
         .bd-placeholder-img {
@@ -63,6 +65,14 @@
         $(document).ready(function(){
             $("#myModal").modal('show');
         });
+
+        jQuery(document).ready(function($){
+     $('.deleteGroup').on('submit',function(e){
+        if(!confirm('Do you want to delete this item?')){
+              e.preventDefault();
+        }
+      });
+});
     </script>
 </head>
 <body>

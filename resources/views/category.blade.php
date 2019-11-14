@@ -14,7 +14,7 @@
         <div class="col-md-9">
 
             <h1 class="display-4">{{ $categories->name }}</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            <p class="lead">{{ $categories->description }}</p>
 
         </div>
     </div>

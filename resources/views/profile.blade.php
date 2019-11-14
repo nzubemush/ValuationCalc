@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <form action="{{ route('user.destroy', Auth::user()->id) }}" method="POST">
+        <form action="{{ route('user.destroy', Auth::user()->id) }}" method="POST" class="deleteGroup">
             @method('DELETE')
             @csrf
             <button class="btn navitext px-5 ml-3 mt-3" style="background-color:#324A5E">
@@ -74,4 +74,5 @@
             </button>
         </form>
     </div>
+
 @endsection

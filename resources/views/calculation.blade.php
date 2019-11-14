@@ -3,15 +3,21 @@
 @section('content')
 @include('layouts.nav2')
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">{{ $subtopic->name }}</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        <img src="{{ '../storage/formulas/' . $subtopic->image }}" alt="" class="img">
+<div class="jumbotron jumbotron-fluid py-4">
+    <div class="container px-5">
+        <h1 class="">{{ $subtopic->name }}</h1>
     </div>
 </div>
 
 <div class="container">
+
+        <div class="input-group col-md-6 mb-3 justify-content-center">
+
+    <img src="{{ '../storage/formulas/' . $subtopic->image }}" alt="" class="img">
+
+    <a href="javascript:history.back()" class="btn btn-default">back</a>
+</div>
+
     @foreach ($formulas as $formula)
 
         <div class="input-group col-md-6 mb-3">
