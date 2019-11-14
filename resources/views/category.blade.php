@@ -3,12 +3,12 @@
 @section('content')
 @include('layouts.nav2')
 
-<div class="jumbotron jumbotron-fluid" style="background-color: rgba(245, 222, 179, 0.315);">
+<div class="jumbotron jumbotron-fluid">
 <div class="container">
     <div class="row justify-content-center text-center">
         <div class="col-md-2">
 
-            <img src="{{ '../storage/icons/' . $categories->icon }}" alt="{{ $categories->name }}" style="width:100%">
+            <img src="{{ '../storage/icons/' . $categories->icon }}" class="img-icon" alt="{{ $categories->name }}">
 
         </div>
         <div class="col-md-9">

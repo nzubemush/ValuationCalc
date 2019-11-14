@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" >
     <div class="row justify-content-center">
         <div class="col-lg-5 mt-5">
             <div class="card">
@@ -58,7 +58,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-12 text-center">
                                 <button type="submit" class="btn navitext px-5">
-                                        <i class="fas fa-sign-in-alt"></i>{{ __('') }}
+                                        {{ __('Login ') }}<i class="fas fa-sign-in-alt"></i>
                                 </button>
 
                                 @if (Route::has('password.request'))

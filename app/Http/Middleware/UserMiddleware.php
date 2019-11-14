@@ -22,13 +22,13 @@ class UserMiddleware
             return $next($request);
         }
 
-        elseif ($request->subtopic == 19){
+        elseif (($request->subtopic == 5) || ($request->subtopic == 2)) {
             return Redirect::back()->withErrors(['msg', 'The Message']);
         }
 
         else {
             return $next($request);
-        };
+        }
 
     }
 }

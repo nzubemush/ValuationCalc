@@ -416,6 +416,13 @@ input.Sol {
     text-decoration:none;
 }
 
+.searchbar > .search_input:focus{
+    padding: 0 10px;
+    width: 500px;
+    caret-color: tomato;
+    transition: width 0.4s linear;
+}
+
 .searchbar1{
     margin-bottom: auto;
     margin-top: auto;
@@ -481,6 +488,56 @@ iframe{
     padding: 1rem;
     background-color: #324A5E;
     text-align: center;
+    color: rgb(0, 0, 0);
 }
 
+.footer a {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
 
+.jumbotron {
+    background-color: rgba(245, 222, 179, 0.415);
+}
+
+.jumbotron:hover {
+    background-color: rgba(245, 222, 179, 0.712);
+}
+
+.img-icon {
+    width: 100%;
+    transition: 0.2s ease-out;
+}
+
+.img-icon:hover {
+    width: 105%;
+    transition: 0.2s ease-in;
+}
+
+  #social-fb:hover {
+    color: #3B5998 !important;
+  }
+
+   #social-tw:hover {
+    color: #4099FF !important;
+  }
+
+   #social-gp:hover {
+    color: #d34836;
+  }
+
+   #social-li:hover {
+    color: #0077B5;
+  }
+
+  #social-gi:hover {
+    color: white;
+  }
+
+  #social-wa:hover {
+    color: #1BD741;
+  }
+
+  html {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }

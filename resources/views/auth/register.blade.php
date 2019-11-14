@@ -10,8 +10,8 @@
                         <a href="/" class="col-7 pt-2 px-0 text-dark"><h4><strong>Valuation</strong>Calc</h4></a>
                         <h4 class="col-3 pt-2">{{ __('Register') }}</h4>
                     </div>
-
-                <div class="card-body">
+                    {{-- style="background-image:url(../storage/loginbg.jpg); background-size: cover;" --}}
+                <div class="card-body" >
                     <form method="POST" action="{{ route('register') }}">
 
                         <div class="form-group row">
@@ -81,7 +81,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-12 text-center">
                                 <button type="submit" class="btn navitext px-5">
-                                        <i class="fas fa-paper-plane"></i>{{ __('') }}
+                                    {{ __('Register ') }}<i class="fas fa-paper-plane"></i>
                                 </button>
                             </div>
                         </div>

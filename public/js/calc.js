@@ -63,7 +63,7 @@ function isNumberKey(txt, evt) {
 
         if(i && n){
             let computed = 1 / ((1+i)**n);
-            document.getElementById('vn').value = computed;
+            document.getElementById('vn').value = RoundCorrect(computed, 3);
         }
 
         if(vn && i){
