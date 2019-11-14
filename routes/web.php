@@ -22,7 +22,7 @@ Route::group(['middleware' => 'auth'], function() {
 
 Route::resource('categories', 'CategoriesController');
 
-Route::resource('topic', 'TopicController');
+Route::resource('topic', 'TopicController')->middleware('prevent-back-history');
 
 Route::resource('subtopic', 'SubtopicController')->middleware('user');
 

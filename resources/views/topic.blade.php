@@ -22,7 +22,20 @@
 
 
         @endforeach
+
     </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <a href="javascript:history.back()" class="btn navitext mt-3 px-5 text-dark" style="background-color: #324A5E"><i class="fas fa-hand-point-left"></i> back</a>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <a href="javascript:history.forward()" class="btn navitext mt-3 px-5 text-dark justify-content-right" style="background-color: #324A5E"><i class="fas fa-hand-point-right"></i> forward</a>
+        </div>
+    </div>
+
+
     @if($errors->any())
 
     <!-- Modal -->

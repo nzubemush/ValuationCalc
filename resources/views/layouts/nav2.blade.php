@@ -72,11 +72,11 @@
 
                     <div class="dropdown-menu dropdown-menu-right">
 
-                        <a class="p-2 text-dark navtext dropdown-item" style="font-size: 13px;" href="{{url('user')}}">
+                        <a class="p-2 text-dark1 navtext dropdown-item" style="font-size: 13px;" href="{{url('user')}}">
                             <i class="fa fa-user-circle"></i> Profile
                         </a>
 
-                        <a class="p-2 text-dark navtext dropdown-item" style="font-size: 13px;" href="{{ route('logout') }}"
+                        <a class="p-2 text-dark1 navtext dropdown-item" style="font-size: 13px;" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt"></i>{{ __(' Logout') }}

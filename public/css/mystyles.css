@@ -541,3 +541,11 @@ iframe{
   html {
     overflow-x: hidden; /* Hide horizontal scrollbar */
   }
+
+  .text-dark1 {
+      color: tomato;
+  }
+
+  .text-dark1:hover {
+    color: #324A5E !important;
+  }
