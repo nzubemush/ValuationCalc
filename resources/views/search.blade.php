@@ -19,4 +19,6 @@
 
         </div>
     </div>
+
+    <a href="javascript:history.back()" class="btn navitext mt-3 px-5 text-dark ml-3" style="background-color: #324A5E"><i class="fas fa-hand-point-left"></i> back</a>
 @endsection

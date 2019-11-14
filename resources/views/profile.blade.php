@@ -57,22 +57,32 @@
                         <input class="form-control" type="text" name="emai" value="{{Auth::User()->email}}" disabled>
                         </div>
                     </div>
+
                     <div class="form-group">
                         <button type="submit" class="btn navitext px-5 ml-3" style="background-color:#324A5E">
                             <i class="fa fa-upload"></i> Update
                         </button>
                     </div>
+
                 </form>
             </div>
         </div>
 
-        <form action="{{ route('user.destroy', Auth::user()->id) }}" method="POST" class="deleteGroup">
-            @method('DELETE')
-            @csrf
-            <button class="btn navitext px-5 ml-3 mt-3" style="background-color:#324A5E">
-                <i class="fa fa-exclamation-triangle"></i> Delete Account
-            </button>
-        </form>
-    </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <form action="{{ route('user.destroy', Auth::user()->id) }}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn navitext px-5 ml-3 mt-3 deleteGroup" type="submit" style="background-color:#324A5E">
+                        <i class="fa fa-exclamation-triangle"></i> Delete Account
+                    </button>
+                </form>
+            </div>
+
+            <div class="col-lg-6">
+                <a href="javascript:history.back()" class="btn navitext mt-3 px-5 text-dark ml-3" style="background-color: #324A5E"><i class="fas fa-hand-point-left"></i> back</a>
+            </div>
+        </div>
+</div>
 
 @endsection

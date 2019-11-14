@@ -17,7 +17,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('/');
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::resource('user', 'UserController');
+    Route::resource('user', 'UserController')->middleware('prevent-back-history');
 });
 
 Route::resource('categories', 'CategoriesController');

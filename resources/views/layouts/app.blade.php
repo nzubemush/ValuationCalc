@@ -53,25 +53,45 @@
         }
     </style>
     <script>
+        // For tooltips
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
-
+        // For toggling my side nav
         $("#menu-toggle").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-
+        // displaying up modal on load
         $(document).ready(function(){
             $("#myModal").modal('show');
         });
-
+        // For deleting account
         jQuery(document).ready(function($){
-     $('.deleteGroup').on('submit',function(e){
-        if(!confirm('Do you want to delete this item?')){
-              e.preventDefault();
-        }
-      });
+        $('.deleteGroup').click(function(e) {
+            var $form =  $(this).closest("form");
+            e.preventDefault();
+            swal({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                buttons:{
+                    confirm: {
+                        text : 'Yes, delete it!',
+                        className : 'btn btn-success'
+                    },
+                    cancel: {
+                        visible: true,
+                        className: 'btn btn-danger'
+                    }
+                }
+            }).then((Delete) => {
+                console.log(Delete);
+                if (Delete) {
+                    $form.submit();
+                }
+            });
+        });
 });
     </script>
 </head>
