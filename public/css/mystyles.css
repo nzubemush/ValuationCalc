@@ -173,7 +173,7 @@
     margin-bottom: 5px;
     position: relative;
 
-    background: tomato;
+    background: wheat;
     border-radius: 3px;
 
     z-index: 1;
@@ -309,11 +309,11 @@
   }
 
   .navtext {
-    color: tomato !important;
+    color: wheat !important;
   }
 
   .navitext {
-    color: tomato !important;
+    color: wheat !important;
     border: solid 1px tomato;
     border-radius: 4px;
   }
@@ -323,7 +323,7 @@
   }
 
   .navtext:hover {
-    color: #B8F9D3;
+    color: tomato;
   }
 
   .quantity::-webkit-inner-spin-button,
@@ -543,9 +543,25 @@ iframe{
   }
 
   .text-dark1 {
-      color: tomato;
+      color: tomato !important;
   }
 
   .text-dark1:hover {
     color: #324A5E !important;
   }
+
+  a.text-dark:hover {
+    color: tomato !important;
+  }
+
+  a.btn.text-dark:hover {
+    color: tomato !important;
+    background-color: rgba(50, 74, 94, 0.911) !important;
+  }
+
+  button.btn.navitext:hover {
+    color: tomato !important;
+    background-color: rgba(50, 74, 94, 0.911) !important;
+  }
+
+  

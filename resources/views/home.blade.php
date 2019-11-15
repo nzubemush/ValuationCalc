@@ -3,6 +3,20 @@
 @section('content')
 @include('layouts.nav')
 
+@if (session('welcome'))
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute;">
+    <div class="toast-header">
+      <strong class="mr-auto">Welcome {{ Auth::user()->firstname}}</strong>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+        {{ session('welcome') }}
+    </div>
+  </div>
+@endif
+
 <div class="container">
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-3 mx-auto text-center">
         <h1 class="display-4"><img src="{{ '../storage/valcal.png' }}" class="home-image"><strong>Valuation</strong>Calc</h1>
@@ -54,5 +68,6 @@
         </div>
     </div>
 @endif
+
 
 @endsection

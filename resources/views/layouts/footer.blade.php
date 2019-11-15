@@ -9,8 +9,8 @@
             <li class="list-inline-item px-2"><a target="_blank" href="https://wa.me/2348063140610"><i id="social-wa" class="fab fa-whatsapp fa-lg"></i></a></li>
         </ul>
     </div>
-    <div class="col-md-5">
-        <a>Copyright <strong>&copy;2019</strong> | Designed by <strong>Nzubechukwu Moshe</strong>.</a>
+    <div class="col-md-5 text-white">
+        <a>Copyright &copy;2019 | Designed by Nzubechukwu Moshe.</a>
     </div>
     <div class="col-md-4 text-left">
         <ul class="list-inline">

@@ -92,11 +92,20 @@
                 }
             });
         });
+    });
+
+    // welcome toast
+        $(document).ready(function(){
+    $('.toast').toast({delay: 3000})
+$('.toast').toast('show')
 });
+
+
     </script>
 </head>
 <body>
     <div id="app">
+        
 
         @yield('content')
 
