@@ -3,20 +3,6 @@
 @section('content')
 @include('layouts.nav')
 
-@if (session('welcome'))
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute;">
-    <div class="toast-header">
-      <strong class="mr-auto">Welcome {{ Auth::user()->firstname}}</strong>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="toast-body">
-        {{ session('welcome') }}
-    </div>
-  </div>
-@endif
-
 <div class="container">
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-3 mx-auto text-center">
         <h1 class="display-4"><img src="{{ '../storage/valcal.png' }}" class="home-image"><strong>Valuation</strong>Calc</h1>
@@ -24,11 +10,11 @@
     </div>
     <div class="container h-100 mb-5">
         <div class="d-flex justify-content-center h-100">
-            <form action="{{ route('search') }}" method="POST">
+            <form action="{{ route('search') }}" method="GET">
                     @csrf
                 <div class="searchbar">
                     <input class="search_input" type="text" name="query" placeholder="Search..." autocomplete="off">
-                    <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                    <a type="sumbit" class="search_icon"><i class="fas fa-search"></i></a>
                 </div>
             </form>
         </div>
@@ -69,5 +55,21 @@
     </div>
 @endif
 
+@if (session('welcome'))
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute;">
+    <div class="toast-header">
+      <strong class="mr-auto">Welcome {{ Auth::user()->firstname}}</strong>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+        {{ session('welcome') }}
+
+
+
+    </div>
+  </div>
+@endif
 
 @endsection

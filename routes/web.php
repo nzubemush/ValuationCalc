@@ -30,4 +30,4 @@ Route::get('contact-us', 'ContactFormController@create')->name('contact-us');
 
 Route::post('contact', 'ContactFormController@store');
 
-Route::post('/search', 'HomeController@search')->name('search');
+Route::get('/search', 'HomeController@search')->name('search')->middleware('prevent-back-history');

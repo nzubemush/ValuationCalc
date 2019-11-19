@@ -32,9 +32,12 @@ function isNumberKey(txt, evt) {
 
         let result = 0.35 + (69 / i);
 
-        if (i > 0) {
+        if (i >= 0) {
+            if (result == 0){
+                document.getElementById('DP').value = 0;
+            }
             document.getElementById('DP').value = RoundCorrect(result, 2);
-        } else {
+            } else {
             document.getElementById('DP').value = "";
         }
     }
@@ -45,11 +48,14 @@ function isNumberKey(txt, evt) {
         let pv = parseFloat(document.getElementById("PV").value);
         let n = parseFloat(document.getElementById("n").value);
 
-        if(i && pv && n){
-            let result = pv * ((1 + i)**n);
+        if((i && pv && n) >= 0){
+            let result = pv * (1 + i)**n;
             console.log(result);
 
-            return document.getElementById('FV').value = RoundCorrect(result, 2);
+            if (result == 0){
+                document.getElementById('FV').value = 0;
+            }
+            document.getElementById('FV').value = RoundCorrect(result, 2);
         } else {
             return document.getElementById('FV').value = "";
         }
@@ -61,13 +67,17 @@ function isNumberKey(txt, evt) {
         let vn = parseFloat(document.getElementById("vn").value);
         let n = parseFloat(document.getElementById("n").value);
 
-        if(i && n){
+        if((i && n) >= 0){
             let computed = 1 / ((1+i)**n);
             document.getElementById('vn').value = RoundCorrect(computed, 3);
         }
 
-        if(vn && i){
+        if((vn && i) >= 0){
             let result = (1 -vn) / i;
+
+            if (result == 0){
+                document.getElementById('an').value = 0;
+            }
             document.getElementById('an').value = RoundCorrect(result, 2);
         } else {
             return document.getElementById('an').value = "";
@@ -79,8 +89,12 @@ function isNumberKey(txt, evt) {
         let i = parseFloat(document.getElementById("i").value);
         let an = parseFloat(document.getElementById("an").value);
 
-        if(i && an){
+        if((i && an) >= 0){
             let result = (1 + i) * an;
+
+            if (result == 0){
+                document.getElementById('ain').value = 0;
+            }
             document.getElementById('ain').value = RoundCorrect(result, 2);
         } else {
             return document.getElementById('ain').value = "";
@@ -94,8 +108,12 @@ function isNumberKey(txt, evt) {
         let p = parseFloat(document.getElementById("p").value);
         let q = parseFloat(document.getElementById("q").value);
 
-        if(bq && bp && p && q){
+        if((bq && bp && p && q) >= 0){
             let result = (bq/bp) * (p/q);
+
+            if (result == 0){
+                document.getElementById('ep').value = 0;
+            }
             document.getElementById('ep').value = RoundCorrect(result, 2);
         } else {
             return document.getElementById('ep').value = "";
@@ -107,8 +125,12 @@ function isNumberKey(txt, evt) {
         let mux = parseFloat(document.getElementById("mux").value);
         let muy = parseFloat(document.getElementById("muy").value);
 
-        if(mux && muy){
+        if((mux && muy) >= 0){
             let result = mux / muy;
+
+            if (result == 0){
+                document.getElementById('mrsxy').value = 0;
+            }
             document.getElementById('mrsxy').value = RoundCorrect(result, 2);
         } else {
             return document.getElementById('mrsxy').value = "";
@@ -122,8 +144,12 @@ function isNumberKey(txt, evt) {
         let px = parseFloat(document.getElementById("px").value);
         let py = parseFloat(document.getElementById("py").value);
 
-        if(bigX && bigY && px && py){
+        if((bigX && bigY && px && py) >= 0){
             let result = (px*bigX) + (py*bigY);
+
+            if (result == 0){
+                document.getElementById('bigI').value = 0;
+            }
             document.getElementById('bigI').value = RoundCorrect(result, 2);
         } else {
             return document.getElementById('bigI').value = "";
@@ -135,8 +161,12 @@ function isNumberKey(txt, evt) {
         let tpl = parseFloat(document.getElementById("tpl").value);
         let bigL = parseFloat(document.getElementById("bigL").value);
 
-        if(tpl && bigL){
+        if((tpl && bigL) >= 0){
             let result = tpl / bigL;
+
+            if (result == 0){
+                document.getElementById('apl').value = 0;
+            }
             document.getElementById('apl').value = RoundCorrect(result, 2);
         } else {
             return document.getElementById('apl').value = "";
@@ -148,8 +178,12 @@ function isNumberKey(txt, evt) {
         let atpl = parseFloat(document.getElementById("atpl").value);
         let abigL = parseFloat(document.getElementById("abigL").value);
 
-        if(atpl && abigL){
+        if((atpl && abigL) >= 0){
             let result = atpl / abigL;
+
+            if (result == 0){
+                document.getElementById('mpl').value = 0;
+            }
             document.getElementById('mpl').value = RoundCorrect(result, 2);
         } else {
             return document.getElementById('mpl').value = "";
@@ -162,7 +196,7 @@ function isNumberKey(txt, evt) {
         let pv = parseFloat(document.getElementById("PV").value);
         let n = parseFloat(document.getElementById("n").value);
 
-        if(k && pv && n){
+        if((k && pv && n) >= 0){
             let result = pv * ((1 + k)**n);
 
             return document.getElementById('fvn').value = RoundCorrect(result, 2);
@@ -176,7 +210,7 @@ function isNumberKey(txt, evt) {
         let k = parseFloat(document.getElementById("k").value);
         let m = parseFloat(document.getElementById("m").value);
 
-        if(k && m){
+        if((k && m) >= 0){
             let result = ((1 + (k/m))**m) - 1;
             document.getElementById('r').value = RoundCorrect(result, 2);
         } else {
@@ -190,7 +224,7 @@ function isNumberKey(txt, evt) {
         let pti = parseFloat(document.getElementById("pti").value);
         let dt = parseFloat(document.getElementById("dt").value);
 
-        if(pt && pti && dt){
+        if((pt && pti && dt) >= 0){
             let result = (dt + (pt - pti)) / pti;
             document.getElementById('k').value = RoundCorrect(result, 2);
         } else {

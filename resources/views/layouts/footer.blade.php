@@ -10,11 +10,11 @@
         </ul>
     </div>
     <div class="col-md-5 text-white">
-        <a>Copyright &copy;2019 | Designed by Nzubechukwu Moshe.</a>
+        <a>Copyright &copy;2019 | Designed by Nzubechukwu Moshe Okoye.</a>
     </div>
     <div class="col-md-4 text-left">
         <ul class="list-inline">
-            <li class="list-inline-item"><a href=""  style="font-size:15px">Contact Us</a></li>
+            <li class="list-inline-item"><a href="{{ route('contact-us') }}"  style="font-size:15px">Contact Us</a></li>
             <li class="list-inline-item px-2"><a href="" style="font-size:15px">About</a></li>
             <li class="list-inline-item"></li>
         </ul>

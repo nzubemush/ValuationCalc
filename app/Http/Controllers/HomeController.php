@@ -33,9 +33,12 @@ class HomeController extends Controller
 
         return view('home', compact('categories'));
     }
-    
+
     public function search(Request $request)
     {
+        request()->validate([
+            'query' => 'required'
+        ]);
         $searchResults = (new Search())
             ->registerModel(Categories::class, 'name')
             ->registerModel(Topic::class, 'name')

@@ -42,7 +42,7 @@
         <img src="{{ '../storage/valcal.png' }}" class="logo-image">
         <a class="text-dark navtext" href="/" style="font-size: 20px;">{{ config('app.name', 'ValuationCalc') }}</a>
     </a>
-    <form action="{{ route('search') }}" method="POST">
+    <form action="{{ route('search') }}" method="GET">
             @csrf
         <div class="searchbar1">
             <input class="search_input1" type="text" name="query" placeholder="Search..." autocomplete="off">

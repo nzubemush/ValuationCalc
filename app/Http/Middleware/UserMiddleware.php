@@ -23,7 +23,7 @@ class UserMiddleware
         }
 
         elseif (($request->subtopic == 5) || ($request->subtopic == 2)) {
-            return Redirect::back()->withErrors(['msg', 'The Message']);
+            return Redirect::back()->with('msg', 'This formula is only available for registered users ');
         }
 
         else {

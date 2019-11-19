@@ -62,10 +62,20 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+        // displaying up error modal on load
+        $(document).ready(function(){
+            $("#myerrorModal").modal('show');
+        });
         // displaying up modal on load
         $(document).ready(function(){
             $("#myModal").modal('show');
         });
+        // timing the modal out
+        $(document).ready(function(){
+            setTimeout(function(){
+        $('#myModal').modal('hide')
+        }, 2000);});
+
         // For deleting account
         jQuery(document).ready(function($){
         $('.deleteGroup').click(function(e) {
@@ -94,18 +104,13 @@
         });
     });
 
-    // welcome toast
-        $(document).ready(function(){
-    $('.toast').toast({delay: 3000})
-$('.toast').toast('show')
-});
-
+    // welcome modal
 
     </script>
 </head>
 <body>
     <div id="app">
-        
+
 
         @yield('content')
 
